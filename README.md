@@ -92,43 +92,43 @@ Located in `resources/app/`.
 ### Project Management
 ```bash
 # Create a new LubiX project
-lubix create-project <project-name>
+deca create-project <project-name>
 
-# Upgrade LubiX to latest version
-lubix upgrade
+# Upgrade Deca CLI to the latest version
+deca upgrade
 
 # Start development server
-lubix serve
+deca lubix serve
 
 # Start development with hot reload
-lubix dev
+deca lubix dev
 ```
 
 ### Database Operations
 ```bash
 # Create database from .env configuration
-lubix db:create
+deca lubix db:create
 
 # Run all pending migrations
-lubix migrate
+deca lubix migrate
 
 # Rollback the last migration batch
-lubix migrate:rollback
+deca lubix migrate:rollback
 
 # Rollback multiple batches (e.g., last 3)
-lubix migrate:rollback 3
+deca lubix migrate:rollback 3
 ```
 
 ### Code Generation
 ```bash
 # Create a new controller
-lubix make:controller <ControllerName>
+deca lubix make:controller <ControllerName>
 
 # Create a new model
-lubix make:model <ModelName>
+deca lubix make:model <ModelName>
 
 # Create a new migration
-lubix make:migration <migration_name>
+deca lubix make:migration <migration_name>
 ```
 
 ---
@@ -139,16 +139,16 @@ LubiX provides a powerful CLI for database management:
 
 ```bash
 # Create the database defined in .env
-lubix db:create
+deca lubix db:create
 
 # Run all pending migrations
-lubix migrate
+deca lubix migrate
 
 # Rollback the last migration batch
-lubix migrate:rollback
+deca lubix migrate:rollback
 
 # Rollback multiple batches (e.g., last 3)
-lubix migrate:rollback 3
+deca lubix migrate:rollback 3
 ```
 
 ---
