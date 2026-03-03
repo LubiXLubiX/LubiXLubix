@@ -10,6 +10,10 @@ use Lubix\Cli\Console\Commands\DbCreateCommand;
 use Lubix\Cli\Console\Commands\MigrateCommand;
 use Lubix\Cli\Console\Commands\RollbackCommand;
 use Lubix\Cli\Console\Commands\ServeCommand;
+use Lubix\Cli\Console\Commands\CreateProjectCommand;
+use Lubix\Cli\Console\Commands\MakeControllerCommand;
+use Lubix\Cli\Console\Commands\MakeModelCommand;
+use Lubix\Cli\Console\Commands\MakeMigrationCommand;
 
 final class Application
 {
@@ -18,11 +22,15 @@ final class Application
 
     public function __construct()
     {
+        $this->register(new CreateProjectCommand());
         $this->register(new DevCommand());
         $this->register(new ServeCommand());
         $this->register(new DbCreateCommand());
         $this->register(new MigrateCommand());
         $this->register(new RollbackCommand());
+        $this->register(new MakeControllerCommand());
+        $this->register(new MakeModelCommand());
+        $this->register(new MakeMigrationCommand());
     }
 
     public function register(CommandInterface $command): void

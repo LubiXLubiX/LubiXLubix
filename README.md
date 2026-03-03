@@ -84,22 +84,65 @@ Located in `resources/app/`.
 
 ---
 
+## 🛠️ Available Commands
+
+### Project Management
+```bash
+# Create a new LubiX project
+lubix create-project <project-name>
+
+# Start development server
+lubix serve
+
+# Start development with hot reload
+lubix dev
+```
+
+### Database Operations
+```bash
+# Create database from .env configuration
+lubix db:create
+
+# Run all pending migrations
+lubix migrate
+
+# Rollback the last migration batch
+lubix migrate:rollback
+
+# Rollback multiple batches (e.g., last 3)
+lubix migrate:rollback 3
+```
+
+### Code Generation
+```bash
+# Create a new controller
+lubix make:controller <ControllerName>
+
+# Create a new model
+lubix make:model <ModelName>
+
+# Create a new migration
+lubix make:migration <migration_name>
+```
+
+---
+
 ## 🛠️ Database & Migrations
 
 LubiX provides a powerful CLI for database management:
 
 ```bash
 # Create the database defined in .env
-php lubix db:create
+lubix db:create
 
 # Run all pending migrations
-deca lubix migrate
+lubix migrate
 
 # Rollback the last migration batch
-deca lubix migrate:rollback
+lubix migrate:rollback
 
 # Rollback multiple batches (e.g., last 3)
-deca lubix migrate:rollback 3
+lubix migrate:rollback 3
 ```
 
 ---
