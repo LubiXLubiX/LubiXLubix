@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'https://esm.sh/react@18.2.0';
 
-// Minimalistic SVG Icons to replace lucide-react dependencies
+// Minimalistic SVG Icons
 const Icon = ({ children, ...props }) => (
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
@@ -231,35 +231,21 @@ function LandingView({ onNavigate }) {
       {/* Feature Grid - Laravel Style */}
       <section className="max-w-7xl mx-auto px-6 py-32 border-t border-gray-200 dark:border-white/5">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          <div className="space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">
-              <Blocks className="w-6 h-6 text-[#FF6F00]" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">Unified Architecture</h3>
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              LubiX provides an amazing developer experience while providing powerful features such as thorough dependency injection and an expressive database ORM.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">
-              <Zap className="w-6 h-6 text-[#FF6F00]" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">Zero Build Experience</h3>
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              Paired with Deca, LubiX offers a modern frontend development experience without the complexity of traditional build tools.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">
-              <Shield className="w-6 h-6 text-[#FF6F00]" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">Secure by Default</h3>
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              Built-in protection against SQL injection, cross-site request forgery, and cross-site scripting.
-            </p>
-          </div>
+          <FeatureCard 
+            icon={<Blocks />} 
+            title="Unified Architecture" 
+            desc="LubiX provides an amazing developer experience while providing powerful features such as thorough dependency injection and an expressive database ORM." 
+          />
+          <FeatureCard 
+            icon={<Zap />} 
+            title="Zero Build Experience" 
+            desc="Paired with Deca, LubiX offers a modern frontend development experience without the complexity of traditional build tools." 
+          />
+          <FeatureCard 
+            icon={<Shield />} 
+            title="Secure by Default" 
+            desc="Built-in protection against SQL injection, cross-site request forgery, and cross-site scripting." 
+          />
         </div>
       </section>
 
@@ -295,11 +281,11 @@ function LandingView({ onNavigate }) {
                   <p><span className="text-blue-400">use</span> Lubix\Core\Routing\<span className="text-yellow-400">Router</span>;</p>
                   <p><span className="text-blue-400">use</span> Lubix\Core\Http\<span className="text-yellow-400">Response</span>;</p>
                   <p className="text-gray-600 mt-4">// Define your routes</p>
-                  <p><span className="text-purple-400">$router</span>-&gt;<span className="text-blue-300">get</span>(<span className="text-green-300">'/'</span>, <span className="text-blue-400">function</span> () &#123;</p>
+                  <p><span className="text-purple-400">$router</span>-&gt;<span className="text-blue-300">get</span>('/', <span className="text-blue-400">function</span> () {'{'}</p>
                   <p className="pl-4">  <span className="text-blue-400">return</span> <span className="text-yellow-400">Response</span>::<span className="text-blue-300">json</span>([</p>
-                  <p className="pl-8">    <span className="text-green-300">'message'</span> =&gt; <span className="text-green-300">'Welcome to the future'</span></p>
+                  <p className="pl-8">    'message' =&gt; 'Welcome to the future'</p>
                   <p className="pl-4">  ]);</p>
-                  <p>&#125;);</p>
+                  <p>{'}'});</p>
                 </div>
               </div>
             </div>
@@ -392,9 +378,9 @@ function DocsView() {
             </div>
             <div className="p-8 font-mono text-sm leading-relaxed text-gray-300">
               <p><span className="text-blue-400">use</span> Lubix\Core\Http\<span className="text-yellow-400">Response</span>;</p>
-              <p className="mt-4"><span className="text-purple-400">$router</span>-&gt;<span className="text-blue-300">get</span>(<span className="text-green-300">'/greeting'</span>, <span className="text-blue-400">function</span> () &#123;</p>
-              <p className="pl-4">  <span className="text-blue-400">return</span> <span className="text-yellow-400">Response</span>::<span className="text-blue-300">html</span>(<span className="text-green-300">'Hello World'</span>);</p>
-              <p>&#125;);</p>
+              <p className="mt-4"><span className="text-purple-400">$router</span>-&gt;<span className="text-blue-300">get</span>('/greeting', <span className="text-blue-400">function</span> () {'{'}</p>
+              <p className="pl-4">  <span className="text-blue-400">return</span> <span className="text-yellow-400">Response</span>::<span className="text-blue-300">html</span>('Hello World');</p>
+              <p>{'}'});</p>
             </div>
           </div>
 
@@ -402,9 +388,9 @@ function DocsView() {
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Route Parameters</h3>
             <p className="text-gray-600 dark:text-gray-400">Sometimes you will need to capture segments of the URI within your route. For example, you may need to capture a user's ID from the URL:</p>
             <div className="bg-[#0A0A0A] p-6 rounded-xl font-mono text-sm text-gray-400 border border-white/5">
-              <p><span className="text-purple-400">$router</span>-&gt;<span className="text-blue-300">get</span>(<span className="text-green-300">'/user/&#123;id&#125;'</span>, <span className="text-blue-400">function</span> (<span className="text-purple-400">$request</span>, <span className="text-purple-400">$params</span>) &#123;</p>
-              <p className="pl-4">  <span className="text-blue-400">return</span> <span className="text-green-300">"User ID: "</span> . <span className="text-purple-400">$params</span>[<span className="text-green-300">'id'</span>];</p>
-              <p>&#125;);</p>
+              <p><span className="text-purple-400">$router</span>-&gt;<span className="text-blue-300">get</span>('/user/{'{'}id{'}'}', <span className="text-blue-400">function</span> (<span className="text-purple-400">$request</span>, <span className="text-purple-400">$params</span>) {'{'}</p>
+              <p className="pl-4">  <span className="text-blue-400">return</span> "User ID: " . <span className="text-purple-400">$params</span>['id'];</p>
+              <p>{'}'});</p>
             </div>
           </div>
         </div>
@@ -433,12 +419,12 @@ function DocsView() {
             <div className="p-8 font-mono text-sm leading-relaxed text-gray-300">
               <p><span className="text-blue-400">namespace</span> App\Http\Controllers;</p>
               <p className="mt-4"><span className="text-blue-400">class</span> <span className="text-yellow-400">UserController</span></p>
-              <p>&#123;</p>
+              <p>{'{'}</p>
               <p className="pl-4">  <span className="text-blue-400">public function</span> <span className="text-blue-300">show</span>(<span className="text-purple-400">$request</span>, <span className="text-purple-400">$params</span>)</p>
-              <p className="pl-4">  &#123;</p>
-              <p className="pl-8">    <span className="text-blue-400">return</span> <span className="text-yellow-400">Response</span>::<span className="text-blue-300">json</span>([<span className="text-green-300">'id'</span> =&gt; <span className="text-purple-400">$params</span>[<span className="text-green-300">'id'</span>]]);</p>
-              <p className="pl-4">  &#125;</p>
-              <p>&#125;</p>
+              <p className="pl-4">  {'{'}</p>
+              <p className="pl-8">    <span className="text-blue-400">return</span> <span className="text-yellow-400">Response</span>::<span className="text-blue-300">json</span>(['id' =&gt; <span className="text-purple-400">$params</span>['id']]);</p>
+              <p className="pl-4">  {'}'}</p>
+              <p>{'}'}</p>
             </div>
           </div>
         </div>
