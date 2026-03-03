@@ -14,6 +14,7 @@ use Lubix\Cli\Console\Commands\CreateProjectCommand;
 use Lubix\Cli\Console\Commands\MakeControllerCommand;
 use Lubix\Cli\Console\Commands\MakeModelCommand;
 use Lubix\Cli\Console\Commands\MakeMigrationCommand;
+use Lubix\Cli\Console\Commands\UpgradeCommand;
 
 final class Application
 {
@@ -23,6 +24,7 @@ final class Application
     public function __construct()
     {
         $this->register(new CreateProjectCommand());
+        $this->register(new UpgradeCommand());
         $this->register(new DevCommand());
         $this->register(new ServeCommand());
         $this->register(new DbCreateCommand());

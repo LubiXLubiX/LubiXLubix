@@ -1,6 +1,7 @@
 {
   "name": "lubix/lubix",
-  "description": "LubiX PHP + JS framework (monorepo)",
+  "description": "LubiX Framework + Deca (Unified Dev Server)",
+  "version": "1.2.1",
   "type": "project",
   "license": "MIT",
   "minimum-stability": "dev",

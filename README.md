@@ -1,5 +1,8 @@
 # LubiX Framework + Deca (Unified Dev Server)
 
+![Version](https://img.shields.io/badge/version-1.2.1-orange?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)
+
 LubiX is a high-performance PHP framework designed for developers who want the speed of modern React reactivity with the reliability of a solid PHP backend, without the complexity of managing multiple development servers and ports.
 
 ![LubiX Logo](/public/lubixbanner.png)
@@ -90,6 +93,9 @@ Located in `resources/app/`.
 ```bash
 # Create a new LubiX project
 lubix create-project <project-name>
+
+# Upgrade LubiX to latest version
+lubix upgrade
 
 # Start development server
 lubix serve
