@@ -2,7 +2,7 @@
 
 LubiX is a high-performance PHP framework designed for developers who want the speed of modern React reactivity with the reliability of a solid PHP backend, without the complexity of managing multiple development servers and ports.
 
-![LubiX Logo](/lubixlogo.svg)
+![LubiX Logo](/public/lubixbanner.png)
 
 ## 🌟 Key Features
 
