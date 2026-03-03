@@ -1,0 +1,14 @@
+{
+  "name": "lubix/core",
+  "description": "LubiX Core (HTTP kernel, routing, middleware)",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^8.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Lubix\\Core\\": "src/"
+    }
+  }
+}

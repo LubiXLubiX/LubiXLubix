@@ -1,0 +1,37 @@
+{
+  "name": "lubix/cli",
+  "description": "LubiX CLI",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^8.1",
+    "lubix/core": "*",
+    "lubix/orm": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../lubix-core",
+      "options": {
+        "symlink": true
+      }
+    },
+    {
+      "type": "path",
+      "url": "../lubix-orm",
+      "options": {
+        "symlink": true
+      }
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Lubix\\Cli\\": "src/"
+    }
+  },
+  "bin": [
+    "bin/lubix"
+  ]
+}

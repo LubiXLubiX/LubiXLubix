@@ -1,0 +1,44 @@
+{
+  "name": "lubix/lubix",
+  "description": "LubiX PHP + JS framework (monorepo)",
+  "type": "project",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^8.1",
+    "lubix/cli": "*",
+    "lubix/orm": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "packages/lubix-cli",
+      "options": {
+        "symlink": true
+      }
+    },
+    {
+      "type": "path",
+      "url": "packages/lubix-orm",
+      "options": {
+        "symlink": true
+      }
+    },
+    {
+      "type": "path",
+      "url": "packages/lubix-core",
+      "options": {
+        "symlink": true
+      }
+    }
+  ],
+  "scripts": {
+    "test": "php -v"
+  }
+}

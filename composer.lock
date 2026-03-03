@@ -1,0 +1,104 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d4560796dd052b9c8b26bdacd09b73a6",
+    "packages": [
+        {
+            "name": "lubix/cli",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/lubix-cli",
+                "reference": "6fefa8280f8e2f33f74f0ed32675cd4f730d19d4"
+            },
+            "require": {
+                "lubix/core": "*",
+                "lubix/orm": "*",
+                "php": "^8.1"
+            },
+            "bin": [
+                "bin/lubix"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lubix\\Cli\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "LubiX CLI",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "lubix/core",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/lubix-core",
+                "reference": "fb98a302354f005488b13b6264778d39e937d8b5"
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lubix\\Core\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "LubiX Core (HTTP kernel, routing, middleware)",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "lubix/orm",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/lubix-orm",
+                "reference": "d61e99b59f84e3ff238d177bb05a1bb285217746"
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lubix\\Orm\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "LubiX ORM (ActiveRecord + Migrations)",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {},
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^8.1"
+    },
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
+}

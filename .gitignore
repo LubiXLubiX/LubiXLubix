@@ -1,0 +1,9 @@
+.DS_Store
+.env
+/vendor
+/node_modules
+/apps/**/vendor
+/apps/**/node_modules
+/packages/**/vendor
+/packages/**/node_modules
+/public/build
