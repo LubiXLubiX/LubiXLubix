@@ -7,3 +7,5 @@
 /packages/**/vendor
 /packages/**/node_modules
 /public/build
+
+Deca-CLI/
