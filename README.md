@@ -23,41 +23,66 @@ LubiX is a high-performance PHP framework designed for developers who want the s
 ### 1. Prerequisites
 - **PHP**: 8.1 or higher (8.2+ recommended)
 - **Composer**: Latest version
-- **Go**: 1.21 or higher (to build Deca CLI from source)
+- **Go**: 1.21 or higher (only if you build Deca from source)
 - **Database**: MySQL, MariaDB, or any PDO-compatible database.
 
-### 2. Project Installation
+### 2. Install Deca CLI
+Deca is the CLI used to create and run LubiX projects.
+
+#### macOS (Intel / Apple Silicon) & Linux
+Option A (recommended): download a prebuilt binary from GitHub Releases.
+
+Option B: build from source:
 ```bash
-# Clone the repository
 git clone https://github.com/LubiXLubiX/Deca.git
-cd Deca
-
-# Install PHP dependencies
-composer install
-
-# Setup environment
-cp .env.example .env
-# Edit .env with your database credentials
-```
-
-### 3. Install Deca CLI
-Deca is the brain of your development workflow.
-
-#### macOS / Linux
-```bash
-cd Deca-CLI
+cd Deca/Deca-CLI
 go build -o deca
 chmod +x deca
 sudo mv deca /usr/local/bin/deca
+deca version
 ```
 
 #### Windows (PowerShell)
+Option A (recommended): download `deca_windows_amd64.exe` from GitHub Releases.
+
+Option B: build from source:
 ```powershell
-cd Deca-CLI
+git clone https://github.com/LubiXLubiX/Deca.git
+cd Deca\Deca-CLI
 go build -o deca.exe
 mkdir $env:USERPROFILE\bin
 move .\deca.exe $env:USERPROFILE\bin\deca.exe
-# Add $env:USERPROFILE\bin to your System PATH
+# Add %USERPROFILE%\bin to PATH
+deca version
+```
+
+### 3. Create a New Project
+```bash
+deca create-project my-app
+cd my-app
+
+composer install
+cp .env.example .env
+
+deca lubix serve
+```
+
+If `composer install` fails, ensure PHP + extensions are installed and `composer` is on your PATH.
+
+### 4. Upgrade Deca
+Automatic:
+```bash
+deca upgrade
+```
+
+Manual (if you want full control):
+```bash
+git clone https://github.com/LubiXLubiX/Deca.git
+cd Deca/Deca-CLI
+git pull
+go build -o deca
+sudo mv deca /usr/local/bin/deca
+deca version
 ```
 
 ---
